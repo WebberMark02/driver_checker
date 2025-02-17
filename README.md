@@ -1,4 +1,4 @@
-# driver_checker  
+# DriverChecker
 
 Spiegazione delle impostazioni dell'applicazione:  
   
