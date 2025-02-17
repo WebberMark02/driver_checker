@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <PreferenceCategory android:title="Models">
+    <PreferenceCategory android:title="Model">
         <SeekBarPreference
             android:key="model_threshold"
             android:title="Threshold"
@@ -34,9 +34,7 @@
         <MultiSelectListPreference
             android:defaultValue="@array/windowSizesDefaults"
             android:entries="@array/windowSizes"
-            android:dialogTitle="Select Windows Thresholds"
             android:singleLineTitle="true"
-            android:summary="Please select all the possible size of the windows"
             android:entryValues="@array/windowSizes"
             android:key="windows_sizes"
             android:title="Windows Sizes" />
@@ -55,7 +53,7 @@
             android:entries="@array/windowOffset"
             android:entryValues="@array/windowOffset"
             android:key="windows_offsets"
-            android:title="Windows Offset" />
+            android:title="Windows Offsets" />
     </PreferenceCategory>
 
 </PreferenceScreen>
