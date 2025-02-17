@@ -3,7 +3,7 @@
 Spiegazione delle impostazioni dell'applicazione:  
   
 Model:  
-- Threshold:
+- Threshold: massimo valore di Intersection-Over-Union per ogni box. Oltre questo valore, la box di un oggetto viene rimossa.
 - Union-Over-Intersection Threshold:  
   
 Window:  
