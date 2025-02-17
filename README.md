@@ -17,4 +17,6 @@ Siano Th, S, Ty e O gli insiemi dei valori dei parametri, rispettivamente, per "
 L'applicazione istanzia un totale di |W| = |Th| * |S| * |Ty| * |O| finestre che verranno riempite con i fotogrammi catturati dalla fotocamera frontale dello smartphone.  
 
 Quindi, l'applicazione utilizza una euristica diversa rispetto a quella utilizzata da Marco Spallone nel suo lavoro di tesi.  
-Mentre Spallone conta gli oggetti di una certa classe in una finestra, questa applicazione conta i fotogrammi di un certo gruppo (guidatore, passeggero) in una finestra.
+Mentre Spallone conta gli oggetti di una certa classe in una finestra, questa applicazione conta i fotogrammi di un certo gruppo (guidatore, passeggero) in una finestra.  
+
+Da quel che ho capito, un singolo fotogramma viene classificato tramite l'euristica "baseline", quella utilizzata anche da Spallone e descritta nella tesi di Jaramillo Saa.
