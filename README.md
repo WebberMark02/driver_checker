@@ -19,4 +19,11 @@ L'applicazione istanzia un totale di |W| = |Th| * |S| * |Ty| * |O| finestre che 
 Quindi, l'applicazione utilizza una euristica diversa rispetto a quella utilizzata da Marco Spallone nel suo lavoro di tesi.  
 Mentre Spallone conta gli oggetti di una certa classe in una finestra, questa applicazione conta i fotogrammi di un certo gruppo (guidatore, passeggero) in una finestra.  
 
-Da quel che ho capito, un singolo fotogramma viene classificato tramite l'euristica "baseline", quella utilizzata anche da Spallone e descritta nella tesi di Jaramillo Saa.
+Da quel che ho capito, un singolo fotogramma viene classificato tramite l'euristica "baseline", quella utilizzata anche da Spallone e descritta nella tesi di Jaramillo Saa.  
+
+Spiegazione dei parametri mostrati in resultFragment e logFragment:  
+- Average Confidence: media delle "confidence" delle finestre, calcolata così:  
+       protected val averageConfidence: Float  
+            get() = sumOfConfidencePerWindowDone/totalWindows
+- Most Frequent Group: gruppo più frequente tra tutte le finestre
+- Model Threshold: Threshold impostato per il modello
