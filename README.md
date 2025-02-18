@@ -18,9 +18,11 @@ L'applicazione istanzia un totale di |W| = |Th| * |S| * |Ty| * |O| finestre che 
 
 Quindi, l'applicazione utilizza una euristica diversa rispetto a quella utilizzata da Marco Spallone nel suo lavoro di tesi.  
 Mentre Spallone conta gli oggetti di una certa classe in una finestra, questa applicazione conta i fotogrammi di un certo gruppo (guidatore, passeggero) in una finestra.  
-
+  
 Da quel che ho capito, un singolo fotogramma viene classificato tramite l'euristica "baseline", quella utilizzata anche da Spallone e descritta nella tesi di Jaramillo Saa.  
-
+Da quel che ho capito, l'euristica "baseline" viene solo usata per classificare i fotogrammi appartenenti a finestre della tipologia "MultipleGroup". Infatti, un
+fotogramma appartenente a una finestra di tipo "SingleGroup" è valido solo se tutti gli oggetti che contiene appartengono a un unico gruppo (Guidatore, Passeggero).  
+  
 Spiegazione dei parametri generali mostrati in resultFragment e logFragment:  
 - Average Confidence: media delle "confidence" delle finestre, calcolata così:  
        protected val averageConfidence: Float  
@@ -37,9 +39,9 @@ Spiegazione dei parametri per ogni finestra mostrati in resultFragment e logFrag
 - Type: euristica utilizzata nella finestra
 - Total Time: tempo impiegato per terminare la finestra
 - Total Windows: 
-- Images:
-- Classes:
-- Objects:
+- Images: numero di fotogrammi appartenenti a un certo gruppo (guidatore, passeggero)
+- Classes: sembrerebbe essere sempre uguale a "objects"
+- Objects: numero di oggetti appartenenti a un certo gruppo (guidatore, passeggero)
 
 Spiegazione dei parametri visibili in cameraFragment durante la valutazione:
 - Parametri a sinistra: Images\:Classes\:Objects per Guidatore
