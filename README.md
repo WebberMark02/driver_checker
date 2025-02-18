@@ -17,11 +17,17 @@ Window:
 Per ogni parametro della window vengono scelti uno o più valori.  
 Siano Th, S, Ty e O gli insiemi dei valori dei parametri, rispettivamente, per "Window Threshold", "Window Size", "Window Type" e "Window Offset".  
 L'applicazione istanzia un totale di |W| = |Th| * |S| * |Ty| * |O| finestre che verranno riempite con i fotogrammi catturati dalla fotocamera frontale dello smartphone.  
+Una volta che viene premuto il tasto "START LIVE", inizia la valutazione in tempo reale.  
 Un fotogramma catturato dalla fotocamera viene inviato al modello. Il modello classifica il fotogramma. Il fotogramma classificato viene inviato a ogni finestra istanziata.  
 Ogni finestra di tipo "SingleGroup" accetta il fotogramma se e solo se il fotogramma contiene solo oggetti appartenenti a un solo gruppo (guidatore, passeggero).  
 ogni finestra di tipo "MultipleGroup" accetta il fotogramma se e solo se contiene almeno un oggetto appartenente a un qualsiasi gruppo (guidatore, passeggero).  
 Ogni finestra contiene una condizione di completamento. Una volta che questa condizione è soddisfatta, la finestra valuta tutti i fotogrammi contenuti al suo interno e non accetta alcun altro fotogramma finché  
 la sua condizione iniziale non verrà ripristinata.  
+Una volta che il gestore delle finestre riconosce che tutte le finestre hanno raggiunto una conclusione, la valutazione termina e vengono mostrati i risultati, che possono essere salvati nel database locale dell'applicazione.  
+  
+Il modello usato dall'applicazione è YOLOv5.  
+Da quel che ho capito, Spallone usò YOLOv8 nel suo lavoro di tesi.  
+Invece, Jaramillo ha usato YOLOv8.  
   
 Quindi, l'applicazione utilizza una euristica diversa rispetto a quella utilizzata da Marco Spallone nel suo lavoro di tesi.  
 Mentre Spallone conta gli oggetti di una certa classe in una finestra, questa applicazione conta i fotogrammi di un certo gruppo (guidatore, passeggero) in una finestra.  
