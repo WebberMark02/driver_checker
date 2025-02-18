@@ -40,7 +40,7 @@ Spiegazione dei parametri per ogni finestra mostrati in resultFragment e logFrag
 - Total Time: tempo impiegato per terminare la finestra
 - Total Windows: 
 - Images: numero di fotogrammi appartenenti a un certo gruppo (guidatore, passeggero)
-- Classes: sembrerebbe essere sempre uguale a "objects"
+- Classes: sembrerebbe essere sempre uguale a "Objects"
 - Objects: numero di oggetti appartenenti a un certo gruppo (guidatore, passeggero)
 
 Spiegazione dei parametri visibili in cameraFragment durante la valutazione:
