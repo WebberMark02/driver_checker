@@ -32,10 +32,15 @@ Spiegazione dei parametri per ogni finestra mostrati in resultFragment e logFrag
 - Gruppo rilevato
 - Window Size
 - Window Threshold
+- Window Offset
 - Confidence: percentuale di fotogrammi appartenenti al gruppo rilevato
 - Type: euristica utilizzata nella finestra
-- Total Time: 
-- Total Windows:
+- Total Time: tempo impiegato per terminare la finestra
+- Total Windows: 
 - Images:
 - Classes:
 - Objects:
+
+Spiegazione dei parametri visibili in cameraFragment durante la valutazione:
+- Parametri a sinistra: Images\:Classes\:Objects per Guidatore
+- Parametri a destra: Images\:Classes\:Objects per Passeggero 
