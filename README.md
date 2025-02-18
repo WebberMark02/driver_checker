@@ -69,7 +69,7 @@ Spiegazione dei parametri per ogni finestra mostrati in resultFragment e logFrag
 - Classes: numero di classi (passenger-window, passenger-belt, driver-window, driver-belt) contate nella finesta. Se in un fotogramma appaiono più istanze della stessa classe, la classe viene contata una sola volta.  
 - Objects: numero di oggetti appartenenti a un certo gruppo (guidatore, passeggero)
   
-Per ogni fotogramma, viene mostrato il tempo trascorso dalla sua acquisizione al termine della sua analisi.
+Per ogni fotogramma, viene mostrato il tempo trascorso dalla sua acquisizione fino al termine della sua analisi.
   
 ## Spiegazione dei parametri visibili durante una valutazione
   
