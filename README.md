@@ -21,9 +21,21 @@ Mentre Spallone conta gli oggetti di una certa classe in una finestra, questa ap
 
 Da quel che ho capito, un singolo fotogramma viene classificato tramite l'euristica "baseline", quella utilizzata anche da Spallone e descritta nella tesi di Jaramillo Saa.  
 
-Spiegazione dei parametri mostrati in resultFragment e logFragment:  
+Spiegazione dei parametri generali mostrati in resultFragment e logFragment:  
 - Average Confidence: media delle "confidence" delle finestre, calcolata così:  
        protected val averageConfidence: Float  
             get() = sumOfConfidencePerWindowDone/totalWindows
 - Most Frequent Group: gruppo più frequente tra tutte le finestre
 - Model Threshold: Threshold impostato per il modello
+
+Spiegazione dei parametri per ogni finestra mostrati in resultFragment e logFragment:  
+- Gruppo rilevato
+- Window Size
+- Window Threshold
+- Confidence: percentuale di fotogrammi appartenenti al gruppo rilevato
+- Type: euristica utilizzata nella finestra
+- Total Time: 
+- Total Windows:
+- Images:
+- Classes:
+- Objects:
