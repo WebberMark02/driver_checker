@@ -9,8 +9,8 @@ Model:
 Window:  
 - Window Threshold: percentuale minima di fotogrammi appartenenti a un certo gruppo (guidatore, passeggero) per poter considerare la finestra terminabile
 - Window Size: grandezza della finestra
-- Window Type: tipo di euristica tra Single Group (un fotogramma è valido se contiene solo oggetti appartenenti a un unico gruppo) oppure Multiple Group (un fotogramma è valido se contiene almeno un oggetto appartenente a un qualsiasi gruppo)
-- Window Offset: numero minimo di fotogrammi per poter considerare la finestra terminabile
+- Window Type: tipo di euristica tra Single Group (un fotogramma è accettato dalla finestra se contiene solo oggetti appartenenti a un unico gruppo) oppure Multiple Group (un fotogramma è accettato dalla finestra se contiene almeno un oggetto appartenente a un qualsiasi gruppo)
+- Window Offset: numero minimo di fotogrammi che la finestra deve valutare per poter essere considerata terminabile
 
 ## Spiegazione del funzionamento generale dell'app  
   
@@ -23,7 +23,18 @@ Ogni finestra di tipo "SingleGroup" accetta il fotogramma se e solo se il fotogr
 ogni finestra di tipo "MultipleGroup" accetta il fotogramma se e solo se contiene almeno un oggetto appartenente a un qualsiasi gruppo (guidatore, passeggero).  
 Ogni finestra contiene una condizione di completamento. Una volta che questa condizione è soddisfatta, la finestra valuta tutti i fotogrammi contenuti al suo interno e non accetta alcun altro fotogramma finché  
 la sua condizione iniziale non verrà ripristinata.  
-Una volta che il gestore delle finestre riconosce che tutte le finestre hanno raggiunto una conclusione, la valutazione termina e vengono mostrati i risultati, che possono essere salvati nel database locale dell'applicazione.  
+Una volta che il gestore delle finestre riconosce che tutte le finestre sono state soddisfatte, la valutazione termina e vengono mostrati i risultati, che possono essere salvati nel database locale dell'applicazione.  
+Non necessariamente tutte le finestre devono essere soddisfatte.  
+Ecco le euristiche specifiche:  
+- una valutazione, prima di considerare il risultato valido, deve superare un certo
+limite ThMIN di confidence che deve essere almeno del 50%
+- una valutazione deve avere un limite massimo di tempo TimeMAX per completarsi.
+Al raggiungimento del limite si utilizza il valore calcolato anche se non tutte le
+Window son state soddisfatte
+- l’unico caso in cui una valutazione può superare TimeMAX è se Conf < ThMIN
+- porre un limite massimo ThMAX di confidence per poter decretare il risultato con certezza
+- è necessario dare più importanza ad un falso positivo rispetto ad un falso negativo
+per poter mantenere la funzionalità di prevenzione.
   
 Il modello usato dall'applicazione è YOLOv5.  
 Da quel che ho capito, Spallone usò YOLOv8 nel suo lavoro di tesi.  
