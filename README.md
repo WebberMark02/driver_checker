@@ -7,10 +7,10 @@ Model:
 - Union-Over-Intersection Threshold:  
   
 Window:  
-- Window Threshold: percentuale minima di fotogrammi appartenenti a un certo gruppo (guidatore, passeggero) per poter considerare la finestra terminabile
+- Window Threshold: percentuale minima di fotogrammi appartenenti a un certo gruppo (guidatore, passeggero) per poter considerare la finestra soddisfacibile
 - Window Size: grandezza della finestra
 - Window Type: tipo di euristica tra Single Group (un fotogramma è accettato dalla finestra se contiene solo oggetti appartenenti a un unico gruppo) oppure Multiple Group (un fotogramma è accettato dalla finestra se contiene almeno un oggetto appartenente a un qualsiasi gruppo)
-- Window Offset: numero minimo di fotogrammi che la finestra deve valutare per poter essere considerata terminabile
+- Window Offset: numero minimo di fotogrammi che la finestra deve valutare per poter essere considerata soddisfacibile
 
 ## Spiegazione del funzionamento generale dell'app  
   
@@ -59,11 +59,11 @@ Spiegazione dei parametri generali mostrati in resultFragment e logFragment:
 Spiegazione dei parametri per ogni finestra mostrati in resultFragment e logFragment:  
 - Gruppo rilevato: gruppo rilevato tra "Passenger" e "Driver"
 - Window Size: grandezza della finestra
-- Window Threshold: percentuale minima di fotogrammi appartenenti a un certo gruppo (guidatore, passeggero) per poter considerare la finestra terminabile
-- Window Offset: numero minimo di fotogrammi per poter considerare la finestra terminabile
+- Window Threshold: percentuale minima di fotogrammi appartenenti a un certo gruppo (guidatore, passeggero) per poter considerare la finestra soddisfacibile
+- Window Offset: numero minimo di fotogrammi per poter considerare la finestra soddisfacibile
 - Confidence: percentuale di fotogrammi appartenenti al gruppo rilevato
 - Type: euristica utilizzata nella finestra
-- Total Time: tempo impiegato per terminare la finestra
+- Total Time: tempo impiegato per soddisfare la finestra
 - Total Windows: numero di volte in cui la finestra ha dovuto fare uscire un fotogramma per accoglierne un altro
 - Images: numero di fotogrammi appartenenti a un certo gruppo (guidatore, passeggero)  
 - Classes: numero di classi (passenger-window, passenger-belt, driver-window, driver-belt) contate nella finesta. Se in un fotogramma appaiono più istanze della stessa classe, la classe viene contata una sola volta.  
