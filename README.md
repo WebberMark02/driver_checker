@@ -23,7 +23,7 @@ Ogni finestra di tipo "SingleGroup" accetta il fotogramma se e solo se il fotogr
 Ogni finestra di tipo "MultipleGroup" accetta il fotogramma se e solo se contiene almeno un oggetto appartenente a un qualsiasi gruppo (guidatore, passeggero).  
 Ogni finestra contiene una condizione di soddisfazione. Una volta che questa condizione è soddisfatta, la finestra valuta tutti i fotogrammi contenuti al suo interno e non accetta alcun altro fotogramma finché  
 la sua condizione iniziale non verrà ripristinata.  
-Una finestra è soddisfatta se è stata riempita completamente e se il suo valore di confidence è maggiore o uguale al suo valore di threshold.
+Una finestra è soddisfatta se è stata riempita completamente e se il suo valore di confidence è maggiore o uguale al suo valore di threshold.  
 Una volta che il gestore delle finestre riconosce che tutte le finestre sono state soddisfatte, la valutazione termina e vengono mostrati i risultati, che possono essere salvati nel database locale dell'applicazione.  
 Non necessariamente tutte le finestre devono essere soddisfatte.  
 Ecco le euristiche specifiche:  
