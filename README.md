@@ -4,7 +4,7 @@
   
 Model:  
 - Threshold: massimo valore di Intersection-Over-Union per ogni box. Oltre questo valore, la box di un oggetto viene rimossa.
-- Union-Over-Intersection Threshold:  
+- Union-Over-Intersection Threshold: ???
   
 Window:  
 - Window Threshold: percentuale minima di fotogrammi appartenenti a un certo gruppo (guidatore, passeggero) per poter considerare la finestra soddisfacibile
